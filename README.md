@@ -26,7 +26,7 @@ CRUD 작업을 위한 RESTful API를 제공하며, 애플리케이션의 견고�
 
 ```bash
 git clone https://github.com/koritsu/homework.git
-cd yusinsa-application
+cd homework
 ```
 
 ### 설정
