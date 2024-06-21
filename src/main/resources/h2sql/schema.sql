@@ -1,0 +1,25 @@
+CREATE TABLE BRAND
+(
+    id   BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    UNIQUE (name)
+);
+
+CREATE TABLE CATEGORY
+(
+    id   BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    UNIQUE (name)
+);
+
+CREATE TABLE "SALES_PRODUCT"
+(
+    id          BIGINT AUTO_INCREMENT PRIMARY KEY,
+    brand_id    BIGINT  NOT NULL,
+    category_id BIGINT  NOT NULL,
+    price       INTEGER NOT NULL,
+    UNIQUE (brand_id, category_id)
+);
+
+
+
