@@ -24,7 +24,9 @@ public class BrandPriceService {
 
         return PriceDtoMapper.createBrandPricesDtoFrom(
                 cheapestBrand.getName(),
-                cheapestBrand.getSalesProducts().stream().map(
+                cheapestBrand.getSalesProducts().stream()
+                        .filter(salesProduct -> salesProduct.getCategory() != null)
+                        .map(
                         salesProduct ->
                                 BrandPricesDto.BrandPriceCategoryDto.builder()
                                         .price(salesProduct.getPrice())
