@@ -1,15 +1,15 @@
 
 ```markdown
-# 무신사 과제 - 유신사 애플리케이션
+# 템플릿
 
 ## 개요
 
-유신사 애플리케이션은 판매 상품, 브랜드 및 카테고리를 관리하기 위해 설계된 Spring Boot 기반의 애플리케이션입니다. 
+이 애플리케이션은 브랜드를 관리하기 위해 설계된 Spring Boot 기반의 애플리케이션입니다. 
 CRUD 작업을 위한 RESTful API를 제공하며, 애플리케이션의 견고성을 보장하기 위해 포괄적인 테스트를 포함하고 있습니다.
 
 ## 기능
 
-- 판매 상품, 브랜드 및 카테고리 관리
+- 브랜드 관리
 - CRUD 작업을 위한 RESTful API 제공
 - H2 데이터베이스 사용
 - Mockito 및 Rest Assured를 사용한 포괄적인 단위 및 통합 테스트
@@ -74,24 +74,6 @@ Gradle을 사용하여 프로젝트를 빌드하고 애플리케이션을 실행
 ./gradlew test
 ```
 
-## 가격 조회 API (문제 1,2,3)
-
-### 카테고리 별 최저가격 브랜드와 상품 가격, 총액을 조회하는 API
-
-- **조회** `GET /v1/prices/categories/cheapest-brand`
-
-### 단일 브랜드로 모든 카테고리 상품을 구매할 때 최저가격에 판매하는 브랜드와 카테고리의 상품가격, 총액을 조회하는 API
-
-- **조회** `GET /v1/prices/brands/cheapest-total-category-price`
-
-### 카테고리 이름으로 최저, 최고 가격 브랜드와 상품 가격을 조회하는 API
-
-- **조회** `GET /v1/prices/detail/categories/{카테고리명}`
-
-## REST API (문제 4)
-
-애플리케이션은 다음과 같은 REST API를 제공합니다.
-
 ### 브랜드 API
 
 - **생성**: `POST /v1/brands`
@@ -100,18 +82,3 @@ Gradle을 사용하여 프로젝트를 빌드하고 애플리케이션을 실행
 - **수정**: `PUT /v1/brands/{id}`
 - **삭제**: `DELETE /v1/brands/{id}`
 
-### 카테고리 API
-
-- **생성**: `POST /v1/categories`
-- **목록 조회**: `GET /v1/categories`
-- **조회**: `GET /v1/categories/{id}`
-- **수정**: `PUT /v1/categories/{id}`
-- **삭제**: `DELETE /v1/categories/{id}`
-
-### 판매 상품 API
-
-- **생성**: `POST /v1/sales-products`
-- **목록 조회**: `GET /v1/sales-products`
-- **조회**: `GET /v1/sales-products/{id}`
-- **수정**: `PUT /v1/sales-products/{id}`
-- **삭제**: `DELETE /v1/sales-products/{id}`

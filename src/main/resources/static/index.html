@@ -10,87 +10,12 @@
 </head>
 <body>
 <div class="container">
-    <h1>무신사 과제</h1>
-
-    <!-- Cheapest Prices by Category -->
-    <section>
-        <h2>1. 카테고리 별 최저가격 브랜드와 상품 가격, 총액을 조회하는 API</h2>
-        <button id="load-cheapest-by-category">Load Cheapest Prices by Category</button>
-        <table>
-            <thead>
-            <tr>
-                <th>Category</th>
-                <th>Brand</th>
-                <th>Price</th>
-            </tr>
-            </thead>
-            <tbody id="cheapest-by-category-list"></tbody>
-        </table>
-        <p>Total Price: <span id="total-price-by-category"></span></p>
-    </section>
-
-    <!-- Cheapest Prices by Brand -->
-    <section>
-        <h2>2. 단일 브랜드로 모든 카테고리 상품을 구매할 때 최저가격에 판매하는 브랜드와 카테고리의 상품가격, 총액을 조회하는 API</h2>
-        <button id="load-cheapest-by-brand">Load Cheapest Prices by Brand</button>
-        <table>
-            <thead>
-            <tr>
-                <th>Brand</th>
-                <th>Category</th>
-                <th>Price</th>
-            </tr>
-            </thead>
-            <tbody id="cheapest-by-brand-list"></tbody>
-        </table>
-        <p>Total Price: <span id="total-price-by-brand"></span></p>
-    </section>
-
-    <!-- Category Price Details -->
-    <section>
-        <h2>3. 카테고리 이름으로 최저, 최고 가격 브랜드와 상품 가격을 조회하는 API</h2>
-        <form id="category-price-details-form" class="form-inline">
-            <label for="category-price-details-name"></label><input type="text" id="category-price-details-name" placeholder="Category Name" required />
-            <button type="submit">Load Category Price Details</button>
-        </form>
-        <table>
-            <thead>
-            <tr>
-                <th>Type</th>
-                <th>Brand</th>
-                <th>Price</th>
-            </tr>
-            </thead>
-            <tbody id="category-price-details-list"></tbody>
-        </table>
-    </section>
-
-    <!-- Category Management -->
-    <section>
-        <h2>4-1. 카테고리 관리</h2>
-        <form id="category-form" class="form-inline">
-            <input type="hidden" id="category-id" />
-            <label for="category-name"></label><input type="text" id="category-name" placeholder="Category Name" required />
-            <button type="submit">Save Category</button>
-        </form>
-        <table>
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Actions</th>
-            </tr>
-            </thead>
-            <tbody id="category-list"></tbody>
-        </table>
-    </section>
-
     <!-- Brand Management -->
     <section>
         <h2>4-2. 브랜드 관리</h2>
         <form id="brand-form" class="form-inline">
-            <input type="hidden" id="brand-id" />
-            <label for="brand-name"></label><input type="text" id="brand-name" placeholder="Brand Name" required />
+            <input type="hidden" id="brand-id"/>
+            <label for="brand-name"></label><input type="text" id="brand-name" placeholder="Brand Name" required/>
             <button type="submit">Save Brand</button>
         </form>
         <table>
@@ -102,30 +27,6 @@
             </tr>
             </thead>
             <tbody id="brand-list"></tbody>
-        </table>
-    </section>
-
-    <!-- Sales Product Management -->
-    <section>
-        <h2>4-3. 상품 관리</h2>
-        <form id="product-form" class="form-inline">
-            <input type="hidden" id="product-id" />
-            <label for="product-brand"></label><select id="product-brand" required></select>
-            <label for="product-category"></label><select id="product-category" required></select>
-            <label for="product-price"></label><input type="number" id="product-price" placeholder="Price" required />
-            <button type="submit">Save Product</button>
-        </form>
-        <table>
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Brand</th>
-                <th>Category</th>
-                <th>Price</th>
-                <th>Actions</th>
-            </tr>
-            </thead>
-            <tbody id="product-list"></tbody>
         </table>
     </section>
 </div>
