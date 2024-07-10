@@ -25,7 +25,6 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.boot:spring-boot-starter-undertow")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.modelmapper:modelmapper:2.4.5")
     implementation("org.projectlombok:lombok:1.18.22")
 
     runtimeOnly("com.h2database:h2")
